@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<title>Returns and Jumps</title>
+</head>
+<body>
+	<h1>Returns and Jumps</h1>
+	<p>Kotlin has three structural jump expressions:</p>
+	<ul>
+		<li>return: By default returns from the nearest enclosing function or anonymous function.</li>
+		<li>break: Terminates the nearest enclosing loop.</li>
+		<li>continue: Proceeds to the next step of the nearest enclosing loop.</li>
+	</ul>
+	<p>All of these expressions can be used as part of larger expressions:</p>
+	
+	<p style="background:#f5f5f5; width:600px; color:blue; height:40px; border:2px red; padding:15px;">val s = person.name ?: return</p>
+
+	<h2>Example</h2>
+	<p>Any expression in Kotlin may be marked with a label. Labels have the form of an identifier followed by the @ sign,<br> for example: abc@, fooBar@ are valid labels (see the grammar). To label an expression,<br> we just put a label in front of it</p>
+	<p style="background:#f5f5f5; width:600px; height:120px; border:2px red; padding:15px; color:blue;">loop@ for (i in 1..100) {<br>
+    for (j in 1..100) {<br>
+        if (...) break@loop<br>
+    }<br>
+}</p>
+
+	<p>A break qualified with a label jumps to the execution point right after the loop marked with that label.<br> A continue proceeds to the next iteration of that loop.</p>
+</body>
+</html>	

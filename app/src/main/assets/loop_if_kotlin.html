@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<title>Loops and If Condition</title>
+</head>
+<body>
+	<h1>Loops and If Condition</h1>
+	<h2>If Expression</h2>
+	<p>In Kotlin, if is an expression, i.e. it returns a value. Therefore there is no ternary operator (condition ? then : else), <br>because ordinary if works fine in this role.</p>
+	
+	<p style="background:#f5f5f5; width:600px; color:blue; height:220px; border:2px red; padding:15px;">// Traditional usage <br>
+var max = a <br>
+if (a < b) max = b<br>
+
+// With else <br>
+var max: Int<br>
+if (a > b) {<br>
+    max = a<br>
+} else {<br>
+    max = b<br>
+}<br>
+ 
+// As expression <br>
+val max = if (a > b) a else b</p>
+
+	<p>if branches can be blocks, and the last expression is the value of a block:</p>
+	<p style="background:#f5f5f5; width:600px; color:blue; height:120px; border:2px red; padding:15px;">val max = if (a > b) {<br>
+    print("Choose a")<br>
+    a<br>
+} else {<br>
+    print("Choose b")<br>
+    b<br>
+}</p>
+
+	<p>If you're using if as an expression rather than a statement (for example, returning its value or assigning it to a variable),<br> the expression is required to have an else branch.</p>
+
+	<h2>When Expression</h2>
+	<p>'when' replaces the switch operator of C-like languages. In the simplest form it looks like this.</p>
+	<p style="background:#f5f5f5; width:600px; height:120px; border:2px red; padding:15px; color:blue;">when (x) {<br>
+    1 -> print("x == 1")<br>
+    2 -> print("x == 2")<br>
+    else -> { // Note the block<br>
+        print("x is neither 1 nor 2")<br>
+    }<br>
+}</p>
+	<p>when matches its argument against all branches sequentially until some branch condition is satisfied.<br> when can be used either as an expression or as a statement. </p>
+
+	<h2>For Loop</h2>
+	<p>for loop iterates through anything that provides an iterator. This is equivalent to the foreach loop in languages<br> like C#. The syntax is as follows:</p>
+	<p style="background:#f5f5f5; width:600px; height:30px; border:2px red; padding:15px; color:blue;">for (item in collection) print(item)</p>
+	<p>The body can be a block. </p>
+	<p style="background:#f5f5f5; width:600px; height:70px; border:2px red; padding:15px; color:blue;">for ((index, value) in array.withIndex()) {<br>
+    println("the element at $index is $value")<br>
+}</p>
+
+	<h2>While Loop</h2>
+	<p>while and do while work as usual</p>
+	<p style="background:#f5f5f5; width:600px; height:120px; border:2px red; padding:15px; color:blue;">while (x > 0) {<br>
+    x--<br>
+}<br>
+
+do {<br>
+    val y = retrieveData()<br>
+} while (y != null) // y is visible here!</p>
+</body>
+</html>	

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/data_types"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="Data Types" />
+
+    <Button
+        android:id="@+id/for_loop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/data_types"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="For loop" />
+
+    <Button
+        android:id="@+id/switch_case"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/for_loop"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="Switch case" />
+
+    <Button
+        android:id="@+id/exception"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch_case"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="Exception Handling" />
+
+    <Button
+        android:id="@+id/constructor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exception"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="Constructor" />
+
+    <Button
+        android:id="@+id/interfac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constructor"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="Interface" />
+
+
+</RelativeLayout>

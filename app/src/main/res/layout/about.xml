@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/blue4">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Kotlin Android"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView16"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Version:1.6" />
+
+    <RelativeLayout
+        android:id="@+id/layout_about"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_margin="20dp"
+        android:background="@color/white"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView17">
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/brown"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:text="About" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/textView18"
+            android:background="@color/brown"/>
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view7"
+            android:layout_marginTop="15dp"
+            android:layout_alignStart="@+id/textView18"
+            android:text="@string/about_1" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView19"
+            android:layout_marginTop="15dp"
+            android:layout_alignStart="@+id/textView18"
+            android:text="Advantages:\n1.Simple and Easy Tutorial\n2.Offline feature\n3.Java-Kotlin Comparison\n4.Learn Sample Programs\n5. Video Tutorials" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_developed"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/layout_about">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/brown"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:text="Developed By" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/textView20"
+            android:background="@color/brown"/>
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view8"
+            android:layout_marginTop="15dp"
+            android:layout_alignStart="@+id/textView20"
+            android:text="Name: Vaishali Gupta" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView22"
+            android:layout_alignStart="@+id/textView20"
+            android:text="Email:" />
+
+        <Button
+            android:id="@+id/button_email"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"
+            android:textColor="@color/brown"
+            android:text="@string/button_text_email"
+            android:layout_alignStart="@+id/textView23"
+            android:layout_marginStart="45dp"
+            android:layout_below="@+id/textView22"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

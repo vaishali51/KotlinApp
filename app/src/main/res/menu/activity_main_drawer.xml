@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_kotlin"
+            android:icon="@drawable/ic_kotlin"
+            android:title="Kotlin Basics" />
+        <item
+            android:id="@+id/nav_video"
+            android:icon="@drawable/ic_switch_video_black_24dp"
+            android:title="Video Tutorials" />
+        <item
+            android:id="@+id/nav_java"
+            android:icon="@drawable/ic_java"
+            android:title="Java to Kotlin" />
+        <item
+            android:id="@+id/nav_android"
+            android:icon="@drawable/ic_android_black_24dp"
+            android:title="Android Programs" />
+        <item android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Share"/>
+        <item android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_email_black_24dp"
+            android:title="Feedback"/>
+        <item android:id="@+id/nav_rate"
+            android:icon="@drawable/ic_star_black_24dp"
+            android:title="Rate Us"/>
+        <item android:id="@+id/nav_about"
+            android:icon="@drawable/ic_help_outline_black_24dp"
+            android:title="About"/>
+    </group>
+
+</menu>

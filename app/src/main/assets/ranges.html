@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<title>Ranges</title>
+</head>
+<body>
+	<h1>Ranges</h1>
+	<p>Range expressions are formed with rangeTo functions that have the operator form which is complemented by in and !in.<br> Range is defined for any comparable type, but for integral primitive types it has an optimized implementation.<br> Here are some examples of using ranges</p>
+	
+	<p style="background:#f5f5f5; width:600px; color:blue; height:50px; border:2px red; padding:15px;">if (i in 1..10) { // equivalent of 1 <= i && i <= 10<br>
+    println(i)<br>
+}
+</p>
+<p>Integral type ranges (IntRange, LongRange, CharRange) have an extra feature: they can be iterated over. The compiler takes<br> care of converting this analogously to Java's indexed for-loop, without extra overhead.</p>
+<p style="background:#f5f5f5; width:600px; height:90px; border:2px red; padding:15px; color:blue;">for (i in 1..4) print(i) // prints "1234"<br>
+for (i in 4..1) print(i) // prints nothing</p>
+<p>What if you want to iterate over numbers in reverse order? It's simple. You can use the downTo() function defined in the standard library</p>
+<p style="background:#f5f5f5; width:600px; height:30px; border:2px red; padding:15px; color:blue;">for (i in 4 downTo 1) print(i) // prints "4321"</p>
+<p>Is it possible to iterate over numbers with arbitrary step, not equal to 1? Sure, the step() function will help you</p>
+<p style="background:#f5f5f5; width:600px; height:50px; border:2px red; padding:15px; color:blue;">for (i in 1..4 step 2) print(i) // prints "13"<br>
+for (i in 4 downTo 1 step 2) print(i) // prints "42"</p>
+<p>To create a range which does not include its end element, you can use the until function:</p>
+<p style="background:#f5f5f5; width:600px; height:70px; border:2px red; padding:15px; color:blue;">for (i in 1 until 10) { // i in [1, 10), 10 is excluded<br>
+     println(i)<br>
+}</p>
+
+</body>
+</html>	

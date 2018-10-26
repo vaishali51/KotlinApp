@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>Functions</title>
+</head>
+<body>
+	<h1>Function Declarations</h1>
+	<p>Functions in Kotlin are declared using the fun keyword</p>
+	
+	<p style="background:#f5f5f5; width:600px; color:blue; height:70px; border:2px red; padding:15px;">fun double(x: Int): Int {<br>
+    return 2*x<br>
+}
+</p>
+
+	<h2>Function Usage</h2>
+	<p>Calling functions uses the traditional approach</p>
+	<p style="background:#f5f5f5; width:600px; height:30px; border:2px red; padding:15px; color:blue;">val result = double(2)
+</p>
+	<p>Calling member functions uses the dot notation</p>
+	<p style="background:#f5f5f5; width:600px; height:30px; border:2px red; padding:15px; color:blue;">Sample().foo() // create instance of class Sample and call foo
+</p>
+
+<h2>Parameters</h2>
+	<p>Function parameters are defined using Pascal notation, i.e. name: type. Parameters are separated using<br> commas. Each parameter must be explicitly typed.</p>
+	<p style="background:#f5f5f5; width:600px; height:70px; border:2px red; padding:15px; color:blue;">fun powerOf(number: Int, exponent: Int) {<br>
+...<br>
+}
+</p>
+
+<h2>Default Arguments</h2>
+	<p>Function parameters can have default values, which are used when a corresponding argument is omitted.<br> This allows for a reduced number of overloads compared to other languages.
+	</p>
+	<p style="background:#f5f5f5; width:600px; height:70px; border:2px red; padding:15px; color:blue;">fun read(b: Array<Byte>, off: Int = 0, len: Int = b.size) {<br>
+...<br>
+}</p>
+
+</body>
+</html>	

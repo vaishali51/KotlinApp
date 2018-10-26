@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="Activity" />
+
+    <Button
+        android:id="@+id/fragments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="Fragments" />
+
+    <Button
+        android:id="@+id/text_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragments"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="Textview and EditText" />
+
+    <Button
+        android:id="@+id/alert_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_edit"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="Alert Dialog" />
+
+    <Button
+        android:id="@+id/on_click_listener"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alert_dialog"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="OnClickListener" />
+
+    <Button
+        android:id="@+id/switch_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/on_click_listener"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blue4"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        android:background="@drawable/button_layout"
+        android:text="Switch Activity" />
+
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/introduction"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:textColor="@color/blue4"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="20dp"
+        android:text="Introduction"
+        android:layout_alignParentEnd="true" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_below="@+id/introduction"/>
+
+    <ListView
+        android:id="@+id/list_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view1" />
+
+    <Button
+        android:id="@+id/getting_started"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/blue4"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="20dp"
+        android:text="Getting Started"
+        android:layout_below="@+id/list_intro" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_below="@+id/getting_started"/>
+
+    <ListView
+        android:id="@+id/list_getting_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view2" />
+
+    <Button
+        android:id="@+id/basics"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/blue4"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="20dp"
+        android:text="Basics"
+        android:layout_below="@+id/list_getting_started" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_below="@+id/basics"/>
+
+    <ListView
+        android:id="@+id/list_basics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view3" />
+
+    <Button
+        android:id="@+id/classes_and_objects"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/blue4"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="20dp"
+        android:text="Classes and Objects"
+        android:layout_below="@+id/list_basics" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_below="@+id/classes_and_objects"/>
+
+    <ListView
+        android:id="@+id/list_classes_and_objects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view4" />
+
+    <Button
+        android:id="@+id/functions"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/blue4"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="20dp"
+        android:text="Functions and Lambdas"
+        android:layout_below="@+id/list_classes_and_objects" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_below="@+id/functions"/>
+
+    <ListView
+        android:id="@+id/list_functions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view5" />
+
+    <Button
+        android:id="@+id/other"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/blue4"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="20dp"
+        android:text="Other"
+        android:layout_below="@+id/list_functions" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_below="@+id/other"/>
+
+    <ListView
+        android:id="@+id/list_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view6" />
+
+</RelativeLayout>

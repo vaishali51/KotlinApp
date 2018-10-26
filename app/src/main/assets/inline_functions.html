@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<title>Inline Functions</title>
+</head>
+<body>
+	<h1>Inline Functions</h1>
+	<p>Using higher-order functions imposes certain runtime penalties: each function is an object,<br> and it captures a closure, i.e. those variables that are accessed in the body of the<br> function. Memory allocations (both for function objects and classes) and virtual calls introduce runtime overhead.<br><br>
+But it appears that in many cases this kind of overhead can be eliminated by inlining the lambda expressions. The functions shown<br> below are good examples of this situation. I.e., the lock() function could be easily inlined<br> at call-sites. Consider the following case:</p>
+	
+	<p style="background:#f5f5f5; width:600px; color:blue; height:30px; border:2px red; padding:15px;">lock(l) { foo() }
+</p>
+<p>Instead of creating a function object for the parameter and generating a call, the compiler could emit the following code</p>
+<p style="background:#f5f5f5; width:600px; color:blue; height:120px; border:2px red; padding:15px;">l.lock()<br>
+try {<br>
+    foo()<br>
+}<br>
+finally {<br>
+    l.unlock()<br>
+}
+</p>
+<p>Isn't it what we wanted from the very beginning?<br><br>
+To make the compiler do this, we need to mark the lock() function with the inline modifier:</p>
+<p style="background:#f5f5f5; width:600px; color:blue; height:60px; border:2px red; padding:15px;">inline fun lock<T>(lock: Lock, body: () -> T): T {<br>
+    // ...<br>
+}
+</p>
+<p>The inline modifier affects both the function itself and the lambdas passed to it: all of those will<br> be inlined into the call site.<br><br>
+Inlining may cause the generated code to grow, but if we do it in a reasonable way (do not inline big functions)<br> it will pay off in performance, especially at "megamorphic" call-sites inside loops.</p>
+
+	<h2>No inline</h2>
+	<p>In case you want only some of the lambdas passed to an inline function to be inlined, you<br> can mark some of your function parameters with the noinline modifier:</p>
+	<p style="background:#f5f5f5; width:600px; height:50px; border:2px red; padding:15px; color:blue;">inline fun foo(inlined: () -> Unit, noinline notInlined: () -> Unit) {<br>
+    // ...<br>
+}
+</p>
+	<p>Inlinable lambdas can only be called inside the inline functions or passed as inlinable arguments, but<br> noinline ones can be manipulated in any way we like: stored in fields, passed around etc.<br><br>
+Note that if an inline function has no inlinable function parameters and no reified type parameters, the <br>compiler will issue a warning, since inlining such functions is very unlikely to be <br>beneficial (you can suppress the warning if you are sure the inlining is needed).</p>
+	
+</body>
+</html>	

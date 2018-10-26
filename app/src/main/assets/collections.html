@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<title>Collections</title>
+</head>
+<body>
+	<h1>Collections</h1>
+	<p>Unlike many languages, Kotlin distinguishes between mutable and immutable collections (lists, sets, maps, etc).<br> Precise control over exactly when collections can be edited is useful for eliminating bugs,<br> and for designing good APIs.</p>
+	<p>It is important to understand up front the difference between a read-only view of a mutable collection, and an actually <br>immutable collection. Both are easy to create, but the type system doesn't express the difference, so<br> keeping track of that (if it's relevant) is up to you.</p>
+	<p>The Kotlin List<out T> type is an interface that provides read-only operations like size, get and so on.<br> Like in Java, it inherits from Collection<T> and that in turn inherits from Iterable<T>. Methods that change the list are<br> added by the MutableList<T> interface. This pattern holds also for Set<out T>/MutableSet<T> and Map<K, out V>/MutableMap<K, V>.</p>
+	<p>We can see basic usage of the list and set types below:</p>
+	
+	<p style="background:#f5f5f5; width:600px; color:blue; height:220px; border:2px red; padding:15px;">val numbers: MutableList<Int> = mutableListOf(1, 2, 3)<br>
+val readOnlyView: List<Int> = numbers<br>
+println(numbers)        // prints "[1, 2, 3]"<br>
+numbers.add(4)<br>
+println(readOnlyView)   // prints "[1, 2, 3, 4]"<br>
+readOnlyView.clear()    // -> does not compile<br>
+
+val strings = hashSetOf("a", "b", "c", "c")<br>
+assert(strings.size == 3)
+</p>
+
+	<p>Kotlin does not have dedicated syntax constructs for creating lists or sets. Use methods from the standard<br> library, such as listOf(), mutableListOf(), setOf(), mutableSetOf(). Map creation in NOT performance-critical<br> code can be accomplished with a simple idiom: mapOf(a to b, c to d)</p>
+	<p>Note that the readOnlyView variable points to the same list and changes as the underlying list changes. If the only references<br> that exist to a list are of the read-only variety, we can consider the collection fully immutable. A<br> simple way to create such a collection is like this:</p>
+	<p style="background:#f5f5f5; width:600px; height:30px; border:2px red; padding:15px; color:blue;">val items = listOf(1, 2, 3)
+</p>
+	<p>Currently, the listOf method is implemented using an array list, but in future more memory-efficient fully immutable collection <br>types could be returned that exploit the fact that they know they can't change.</p>
+	<p>Note that the read-only types are covariant. That means, you can take a List<Rectangle> and assign it to List<Shape> assuming<br> Rectangle inherits from Shape. This wouldn't be allowed with the mutable collection types because it would<br> allow for failures at runtime.</p>
+	<p>Sometimes you want to return to the caller a snapshot of a collection at a particular point in time, one that's guaranteed to not change:</p>
+	<p style="background:#f5f5f5; width:600px; color:blue; height:90px; border:2px red; padding:15px;">class Controller {<br>
+    private val _items = mutableListOf<String>()<br>
+    val items: List<String> get() = _items.toList()<br>
+}</p>
+	<p>The toList extension method just duplicates the lists items, thus, the returned list is guaranteed to never change.<br><br>
+There are various useful extension methods on lists and sets that are worth being familiar with:</p>
+<p style="background:#f5f5f5; width:600px; color:blue; height:270px; border:2px red; padding:15px;">val items = listOf(1, 2, 3, 4)<br>
+items.first() == 1<br>
+items.last() == 4<br>
+items.filter { it % 2 == 0 }   // returns [2, 4]<br>
+<br>
+val rwList = mutableListOf(1, 2, 3)<br>
+rwList.requireNoNulls()        // returns [1, 2, 3]<br>
+if (rwList.none { it > 6 }) println("No items above 6")  // prints "No items above 6"<br>
+val item = rwList.firstOrNull()</p>
+
+<p>as well as all the utilities you would expect such as sort, zip, fold, reduce and so on.<br><br>
+Maps follow the same pattern. They can be easily instantiated and accessed like this:</p>
+<p style="background:#f5f5f5; width:600px; color:blue; height:90px; border:2px red; padding:15px;">val readWriteMap = hashMapOf("foo" to 1, "bar" to 2)<br>
+println(readWriteMap["foo"])  // prints "1"<br>
+val snapshot: Map<String, Int> = HashMap(readWriteMap)</p>
+</body>
+</html>	

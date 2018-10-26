@@ -1,0 +1,212 @@
+<resources>
+    <string name="app_name">Kotlin-Android Tutorial</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="what_is_kotlin_1"><b>Kotlin</b> is the new lovechild of the <i>JVM developers world</i>.</string>
+    <string name="what_is_kotlin_2"><b>Google</b> promoted Kotlin as a first class language on its Java-based Android platform back in May. Since then, the whole development world has been wondering: what is this language? Kotlin has been around for a few years and has been running on production systems, after the languages <b>1.0 release</b> in February 2016, for a year or so. The language has received a lot of praise and loving words from the developer community. It is a breath of fresh air, a good upgrade to systems running older versions of <b>Java</b>, and still somehow an old dog in a familiar playing field.</string>
+    <string name="what_is_kotlin_3">In the next three tutorials, we will introduce you to the Kotlin language, starting from <b>basics</b> and making our way through the more difficult aspects of it. In this post, we will cover the syntax and other basic building blocks of the language. In Introduction to Kotlin Part 2, we will touch on variables, functions, classes, interfaces, and objects. Finally, in Part 3 we’ll look at a few examples about control flow in Kotlin.</string>
+    <string name="note_3"> <font color='red'>Note:</font> In <b>Google I/O 2017</b>, Google has announced that Kotlin is the another official language for Android Development. </string>
+    <string name="kotlin_for_server_side_1"><b><font color='blue'>Expressiveness</font></b>: Kotlin innovative language features, such as its support for type-safe builders and delegated properties, help build powerful and easy-to-use abstractions.</string>
+    <string name="kotlin_for_server_side_2"><b><font color='blue'>Scalability</font></b>: Kotlin support for coroutines helps build server-side applications that scale to massive numbers of clients with modest hardware requirements.</string>
+    <string name="kotlin_for_server_side_3"><b><font color='blue'>Interoperability</font></b>: Kotlin is fully compatible with all Java-based frameworks, which lets you stay on your familiar technology stack while reaping the benefits of a more modern language.</string>
+    <string name="kotlin_for_server_side_4"><b><font color='blue'>Migration</font></b>: Kotlin supports gradual, step by step migration of large codebases from Java to Kotlin. You can start writing new code in Kotlin while keeping older parts of your system in Java.</string>
+    <string name="kotlin_for_android_1">We have been watching Kotlin adoption on <b>Android</b> steadily rise over the years, with increasing excitement among developers.  Best of all, it is interoperable with our existing Android languages and runtime. So we are thrilled to make Kotlin an <b>official language</b> on Android.</string>
+    <string name="kotlin_for_android_2"><i>Kotlin is expressive, concise, extensible, powerful, and a joy to read and write. It has wonderful safety features in terms of nullability and immutability, which aligns with our investments to make Android apps healthy and performant by default.</i></string>
+    <string name="kotlin_for_android_3">If you are interested in using Kotlin, it is easy to get started because it works side by side with <b>Java</b> and <b>C++</b> on Android. So you can keep your existing code, continue to use the various Android libraries, and incrementally add Kotlin code to your project. </string>
+
+    <string name="about_1">Kotlin-Android is one of the most useful apps to learn Kotlin easily.</string>
+    <string name="button_text_email"><u>vaishalig714@gmail.com</u></string>
+
+    <string name="java_1"><font color='blue'>byte a = 68;\nString name ="Rajni"\nint decimal = 100;\nint octal = 0144;\nint hexa =  0x64;</font></string>
+    <string name="kotlin_1"><font color='blue'>val a: Int? = 1\nval b: Long? = a\nval b: Byte = 1\nval i: Int = b</font></string>
+    <string name="kotlin_2">fun main(args: Array&lt;String&gt;) {\nfor (i in 1..5) {\nprintln(i)\n}\n</string>
+    <string name="java_2">public class ForLoop{\npublic static void main(String[] args){\nfor(int i = 1;i &lt;= 5;i++){\nfor(int j = 1;j &lt;= i;j++){\nSystem.out.print(i);\n}\nSystem.out.println();\n}\n}</string>
+    <string name="kotlin_3">fun main(args: Array&lt;String&gt;) {\n
+    val a = 10\n
+    when(a) {\n
+        1 -> println("a is 1");\n
+        2 -> println("a is 2");\n
+        3 -> println("a is 3");\n
+        4 -> println("a is 4");\n
+        else -> println("a is neither 1 nor 2 nor 3 nor 4")       // Note that this else statement is optional\n
+    }\n
+}</string>
+    <string name="java_3">public class Test {\n
+   public static void main(String args[]) {\n
+      int no = Integer.parseInt(args[0]);\n
+        switch(grade) {\n
+         case 1 :\n
+            System.out.println("1!");\n
+            break;\n
+         case 2 :\n
+            System.out.println("2!");\n
+            break;\n
+         case 3 :\n
+            System.out.println("3!");\n
+            break;\n
+         default :\n
+            System.out.println("Oops!");\n
+      }\n
+      System.out.println("Number entered " + no);\n
+   }\n
+}</string>
+
+    <string name="java_4">class Division {\n
+  public static void main(String[] args) {\n
+  int a, b, result;\n
+  Scanner input = new Scanner(System.in);\n
+  System.out.println("Input two integers");\n
+  a = input.nextInt();\n
+  b = input.nextInt();\n
+  // try block\n
+  try {\n
+    result  = a / b;\n
+    System.out.println("Result = " + result);\n
+  }\n
+  // catch block\n
+  catch (ArithmeticException e) {\n
+    System.out.println("Exception caught: Division by zero.");\n
+  }\n
+  }\n
+}</string>
+    <string name="kotlin_4">
+        private fun exceptionHandling(test: String){\n
+        val a: Int? = try {\n
+        parseInt(input) \n
+        } \n
+        catch (e: NumberFormatException) {\n
+            null\n
+        }\n
+        }
+    </string>
+    <string name="kotlin_5">
+        fun main(args: Array&lt;String&gt;) {\n
+    val person1 = Person("Joe", 25)\n
+    println("First Name = ${person1.firstName}")\n
+    println("Age = ${person1.age}")\n
+}\n
+class Person(val firstName: String, var age: Int) {\n\n
+}
+    </string>
+    <string name="java_5">
+        class Programming {\n
+  //constructor method\n
+  Programming() {\n
+    System.out.println("Constructor method called.");\n
+  }\n
+  public static void main(String[] args) {\n
+    Programming object = new Programming(); //creating object\n
+  }\n
+}
+    </string>
+    <string name="java_6">
+        public class MammalInt implements Animal {\n
+   public void eat() {\n
+      System.out.println("Mammal eats");\n
+   }\n
+   public void travel() {\n
+      System.out.println("Mammal travels");\n
+   } \n
+   public int noOfLegs() {\n
+      return 0;\n
+   }\n
+   public static void main(String args[]) {\n
+      MammalInt m = new MammalInt();\n
+      m.eat();\n
+      m.travel();\n
+   }\n
+}
+    </string>
+    <string name="kotlin_6">
+        interface MyInterface {\n
+    val prop: Int // abstract\n
+    val propertyWithImplementation: String\n
+        get() = "foo"\n
+    fun foo() {\n
+        print(prop)\n
+    }\n
+}\n\n
+class Child : MyInterface {\n
+    override val prop: Int = 29\n
+}
+    </string>
+    <string name="android_1">
+        class MyActivity: Activity() {\n
+        override fun onCreate(savedInstanceStable: Bundle?, persistentState:\n
+        PersistableBundle?){\n
+        super.onCreate(savedInstanceStable, persistentState)\n
+        setContentView(R.layout.activity_main);\n
+    }\n
+}
+    </string>
+    <string name="android_2">
+        class MyFragment: Fragment() {\n
+        override fun onCreateView(inflater: LayoutInflater, container:{\n
+        ViewGroup?, savedInstanceState: Bundle): View?{\n
+        // Inflate the layout for this fragment\n
+        return inflater.inflate(R.layout.example_fragment, container, false);\n
+    }\n
+}
+    </string>
+    <string name="android_3">
+        class MyActivity: Activity() {\n
+        override fun onCreate(savedInstanceStable: Bundle?, persistentState:\n
+        PersistableBundle?){\n
+        super.onCreate(savedInstanceStable, persistentState)\n
+        setContentView(R.layout.activity_main);\n
+      //--- text view---\n
+        val txtView = findViewById(R.id.text_id);\n
+        txtView.text = "Hello"\n
+        //---edit text---\n
+        val edit = findViewById(R.id.edit_id)\n
+        edit.setText("Hello");\n
+   }\n
+}
+    </string>
+    <string name="android_4">
+        fun showAlertDialog() {\n
+val alertDialogBuilder = AlertDialog.Builder(activity)\n
+alertDialogBuilder.setMessage("Are you sure, You wanted to make decision")\n
+alertDialogBuilder.setPositiveButton("yes" ) \n
+{ \n
+arg0, arg1 -> Toast.makeText(activity, "You clicked yes button", Toast.LENGTH_LONG).show()\n
+} \n
+alertDialogBuilder.setNegativeButton("No") \n
+{ \n
+dialog, which -> activity.finish() \n
+} \n
+val alertDialog = alertDialogBuilder.create() \n
+alertDialog.show() \n
+}
+    </string>
+    <string name="android_5">
+        val textView = view.findViewById(R.id.tv_mail) as TextView \n
+textView.setOnClickListener \n
+{ \n
+Log.d(TAG, "onClick: textview")\n
+}
+    </string>
+    <string name="android_6">
+        fun startActivity(activity: Activity, NextActivity: Class&lt;*&gt;) { \n
+val i = Intent(activity, NextActivity) \n
+i.putExtra("key1", "testing1") \n
+i.putExtra("key2", "testing2") \n
+activity.startActivity(i) \n
+activity.finish() \n
+}
+    </string>
+    <string name="basic_1">
+        Package specification should be at the top of the source file:
+    </string>
+    <string name="basic_2">package my.demo\n
+import java.util.*\n
+// ...</string>
+    <string name="basic_3">Function having two Int parameters with Int return type:</string>
+    <string name="basic_4">fun sum(a: Int, b: Int): Int {\n
+    return a + b\n
+}</string>
+</resources>

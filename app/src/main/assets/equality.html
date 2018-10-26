@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<title>Equality</title>
+</head>
+<body>
+	<h1>Equality</h1>
+	<p>In Kotlin there are two types of equality:</p>
+	<ul>
+		<li>Referential equality (two references point to the same object)</li>
+		<li>Structural equality (a check for equals())</li>
+	</ul>
+
+	<h2>Refrential Equality</h2>
+	<p>Referential equality is checked by the === operation (and its negated counterpart !==). a === b evaluates to true if<br> and only if a and b point to the same object.</p>
+
+<h2>Structural Equality</h2>
+	<p>Structural equality is checked by the == operation (and its negated counterpart !=). By convention, an expression like<br> a == b is translated to</p>
+	<p style="background:#f5f5f5; width:600px; height:50px; border:2px red; padding:15px; color:blue;">a?.equals(b) ?: (b === null)
+</p>
+<p>I.e. if a is not null, it calls the equals(Any?) function, otherwise (i.e. a is null) it checks <br>that b is referentially equal to null.<br><br>
+Note that there's no point in optimizing your code when comparing to null explicitly: a == null <br>will be automatically translated to a === null.</p>
+
+</body>
+</html>	

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title>Basic Types</title>
+	<style>
+		table,th,td {border:2px solid black;padding:5px;width:200px;border-collapse:collapse}
+		th {text-align:left;}
+	</style>
+</head>
+<body>
+	<h1>Basic Types</h1>
+	<p>In Kotlin, everything is an object in the sense that we can call member functions and properties on any variable. Some of the types can have a special internal<br> representation - for example, numbers, characters and booleans can be represented as primitive values 
+	at runtime - but to the user they look like ordinary classes.<br> In this section we describe the basic types used in Kotlin: numbers, characters, booleans, arrays, and strings.</p>
+	<h2>Numbers</h2>
+	<p>Kotlin handles numbers in a way close to Java, but not exactly the same. For example, there are no implicit widening conversions for numbers, and <br>literals are slightly different in some cases.</p>
+	<p>Kotlin provides the following built-in types representing numbers (this is close to Java):</p>
+	<table style="margin-left:100px;margin-top:30px">
+		<tr><th>Type</th><th>Bit Width</th></td>
+		<tr><td>Double</td><td>64</td></tr>
+		<tr><td>Float</td><td>32</td></tr>
+		<tr><td>Long</td><td>64</td></tr>
+		<tr><td>Int</td><td>32</td></tr>
+		<tr><td>Short</td><td>16</td></tr>
+		<tr><td>Byte</td><td>8</td></tr>
+	</table>
+	<p>Note that characters are not numbers in Kotlin.</p>
+
+	<h2>Literal Constants</h2>
+	<p>There are the following kinds of literal constants for integral values:</p>
+	<ul>
+		<li>Decimals: 123 <ul><li>Longs are tagged by a capital L: 123L</li></ul></li>
+		<li>Hexadecimals: 0x0F</li>
+		<li>Binaries: 0b00001011</li>
+	</ul>
+	<p>NOTE: Octal literals are not supported.<br><br>Kotlin also supports a conventional notation for floating-point numbers:</p>
+	<ul>
+		<li>Doubles by default: 123.5, 123.5e10</li>
+		<li>Floats are tagged by f or F: 123.5f</li>
+	</ul>
+	
+	<h2>Underscores in numeric literals (since 1.1)</h2>
+	<p>You can use underscores to make number constants more readable:</p>
+	<p style="background:#f5f5f5; width:600px; height:100px; border:2px red; padding:15px; color:blue;">val oneMillion = 1_000_000<br>
+val creditCardNumber = 1234_5678_9012_3456L<br>
+val socialSecurityNumber = 999_99_9999L<br>
+val hexBytes = 0xFF_EC_DE_5E<br>
+val bytes = 0b11010010_01101001_10010100_10010010</p>
+
+</body>
+</html>	

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<title>Lambdas</title>
+</head>
+<body>
+	<h1>Lambda Expression</h1>
+	<p>A lambda expression or an anonymous function is a "function literal", i.e. a function that is not declared,<br> but passed immediately as an expression. Consider the following example:</p>
+	
+	<p style="background:#f5f5f5; width:600px; color:blue; height:30px; border:2px red; padding:15px;">max(strings, { a, b -> a.length < b.length })
+</p>
+	<p>Function max is a higher-order function, i.e. it takes a function value as the second argument.<br> This second argument is an expression that is itself a function, i.e. a<br> function literal. As a function, it is equivalent to</p>
+	<p style="background:#f5f5f5; width:600px; color:blue; height:30px; border:2px red; padding:15px;">fun compare(a: String, b: String): Boolean = a.length < b.length
+
+	<h2>Lambda Expression Syntax</h2>
+	<p>The full syntactic form of lambda expressions, i.e. literals of function types, is as follows:</p>
+	<p style="background:#f5f5f5; width:600px; height:30px; border:2px red; padding:15px; color:blue;">val sum = { x: Int, y: Int -> x + y }
+</p>
+	<p>A lambda expression is always surrounded by curly braces, parameter declarations in the full syntactic form go<br> inside parentheses and have optional type annotations, the body goes after an -> sign.<br> If the inferred return type of the lambda is not Unit, the last (or possibly single)<br> expression inside the lambda body is treated as the return value.<br><br>
+If we leave all the optional annotations out, what's left looks like this:</p>
+	<p style="background:#f5f5f5; width:600px; height:30px; border:2px red; padding:15px; color:blue;">val sum: (Int, Int) -> Int = { x, y -> x + y }</p>
+	<p>It's very common that a lambda expression has only one parameter. If Kotlin can figure the signature out itself,<br> it allows us not to declare the only parameter, and will implicitly declare it for us under <br>the name it:</p>
+	<p style="background:#f5f5f5; width:600px; height:30px; border:2px red; padding:15px; color:blue;">ints.filter { it > 0 } // this literal is of type '(it: Int) -> Boolean'</p>
+	<p>We can explicitly return a value from the lambda using the qualified return syntax. Otherwise, the<br> value of the last expression is implicitly returned. Therefore, the two following<br> snippets are equivalent:</p>
+	<p style="background:#f5f5f5; width:600px; height:150px; border:2px red; padding:15px; color:blue;">ints.filter {<br>
+    val shouldFilter = it > 0 <br>
+    shouldFilter<br>
+}<br>
+
+ints.filter {<br>
+    val shouldFilter = it > 0 <br>
+    return@filter shouldFilter<br>
+}</p>
+<p>Note that if a function takes another function as the last parameter, the lambda expression argument can be passed<br> outside the parenthesized argument list. See the grammar for callSuffix.</p>
+
+</body>
+</html>	

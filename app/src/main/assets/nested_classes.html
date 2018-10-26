@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<title>Nested Class</title>
+</head>
+<body>
+	<h1>Nested Class</h1>
+	<p>Classes can be nested in other classes</p>
+	
+	<p style="background:#f5f5f5; width:600px; color:blue; height:150px; border:2px red; padding:15px;">class Outer {<br>
+    private val bar: Int = 1<br>
+    class Nested {<br>
+        fun foo() = 2<br>
+    }<br>
+}<br>
+
+val demo = Outer.Nested().foo() // == 2<br>
+</p>
+
+	<h2>Inner Classes</h2>
+	<p>A class may be marked as inner to be able to access members of outer class. Inner classes carry a reference<br> to an object of an outer class:</p>
+	<p style="background:#f5f5f5; width:600px; height:150px; border:2px red; padding:15px; color:blue;">class Outer {<br>
+    private val bar: Int = 1<br>
+    inner class Inner {<br>
+        fun foo() = bar<br>
+    }<br>
+}<br>
+
+val demo = Outer().Inner().foo() // == 1
+</p>
+
+<h2>Anonymous Inner Classes</h2>
+	<p>Anonymous inner class instances are created using an object expression:</p>
+	<p style="background:#f5f5f5; width:600px; height:150px; border:2px red; padding:15px; color:blue;">window.addMouseListener(object: MouseAdapter() {<br>
+    override fun mouseClicked(e: MouseEvent) {<br>
+        // ...<br>
+    }<br>
+                                                                                                            
+    override fun mouseEntered(e: MouseEvent) {<br>
+        // ...<br>
+    }<br>
+})
+</p>
+
+	<p>If the object is an instance of a functional Java interface (i.e. a Java interface with a single abstract method),<br> you can create it using a lambda expression prefixed with the type of the interface:</p>
+	<p style="background:#f5f5f5; width:600px; height:30px; border:2px red; padding:15px; color:blue;">val listener = ActionListener { println("clicked") }
+</p>
+</body>
+</html>	
